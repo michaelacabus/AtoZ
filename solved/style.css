@@ -1,0 +1,182 @@
+/* font-family: 'Abril Fatface', cursive; */
+/*font-family: 'Noto Sans', sans-serif; */
+
+#container {
+    width:auto;
+    margin:2%;
+}
+
+body {
+    background-color: #F2EAE1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color:#2C2D48;
+    font-size: 24px;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+
+}
+
+.logo {
+    font-family: 'Abril Fatface', cursive; 
+}
+
+h1 {
+
+    font:85px 'Abril Fatface', cursive;
+    line-height: 1;
+}
+
+.banner_text p {
+    font-family: 'Noto Sans', sans-serif;
+    font-size:24px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:75%;
+    margin: auto;
+}
+
+.banner_video video {
+    width:100%;
+}
+
+.sub_nav {
+    font-family:'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+ h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size:36px;
+    margin:0px;
+}
+
+p {
+    font-family:'Noto Sans', sans-serif;
+    font-size:18px;
+}
+
+button {
+    background-color:#E9DECF;
+    border-radius:30px;
+    border:1px solid #D1BDAA;
+    font-family:'Noto Sans', sans-serif;
+    font-size:18px;
+    text-transform: uppercase;
+    padding:20px;
+}
+
+button.active {
+    background-color:#2C2D48;
+    color:#ffffff;
+}
+
+/*display grid, columns of 25% each */
+
+.cards {
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    /*this centers the content but provides a margin */
+    margin: 5%;
+    width: auto;
+
+}
+
+/*card area, a nested grid */
+/*one area for letter, one for definition */
+
+.card_area {
+    background-color:#EDDFD1;
+    border:1px solid #D1BDAA;
+    border-radius: 15px;
+    margin:5%;
+    width: auto;
+    display: grid;
+    padding:20px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "letter letter"
+    "definition definition"
+}
+
+/* hover color */
+
+.card_area:hover {
+
+background-color:#358357;
+color: #ffffff;
+
+}
+
+.card_area h1:hover {
+    color:#005C53;
+}
+
+.definition h2:hover, .card_area p:hover {
+    color:#ffffff;
+
+}
+/*undoing h1 default margin */
+.card_area h1 {
+    font-size:174px;
+    margin:0px;
+}
+
+/*parent has position absolute */
+.letter {
+    grid-area: letter;
+    /*float letter left*/
+    margin-left: auto;
+    position: relative;
+    display: flex;
+}
+
+.definition {
+    grid-area:definition;
+}
+
+
+/*position absolute and bottom 0px orients video to the bottom */
+.letter video {
+    width:100%;
+    position: absolute;
+    bottom:0px;
+}
+
+.letter img {
+    width: 100%;
+    position: absolute;
+    bottom: 18%;
+}
+
+/* Portrait and Landscape */
+
+
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 600px)
+ {
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .cards {
+        display: block;
+        grid-template-columns: 100% !important;
+        margin: 5%;
+        width: auto;
+    }
+
+}

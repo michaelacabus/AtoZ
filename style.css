@@ -1,187 +1,124 @@
-/* font-family: 'Abril Fatface', cursive; */
-/*font-family: 'Noto Sans', sans-serif; */
+/*font-family: 'Abril Fatface', cursive; */
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Noto Sans', sans-serif;*/
 
 #container {
-    width:auto;
-    margin:2%;
+    width: 100%;
+    margin: 0 auto;
+    
 }
-
-body {
+Body {
     background-color: #F2EAE1;
 }
-
-
-
-nav {
-    display: flex;
+nav { 
+    display:flex;
     justify-content: space-between;
 }
-
-nav a {
+a {
     text-decoration: none;
-    color:#2C2D48;
+    color: #2c2d48;
     font-size: 24px;
     font-family: 'Noto Sans', sans-serif;
     text-transform: uppercase;
-
 }
 
 .logo {
-    font-family: 'Abril Fatface', cursive; 
+    font-family: 'Abril Fatface', cursive;
+
 }
 
-h1 {
+.banner_text h1 {
 
-    font:85px 'Abril Fatface', cursive;
-    line-height: 1;
+    font: 62px 'Abril Fatface', cursive;
 }
 
 .banner_text p {
     font-family: 'Noto Sans', sans-serif;
-    font-size:24px;
+    font-size: 24px;
+
 }
 
 .banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:75%;
+    width: 75%;
     margin: auto;
+
 }
 
 .banner_video video {
-    width:100%;
+    width: 100%;
 }
 
 .sub_nav {
-    font-family:'Noto Sans', sans-serif;
     text-align: center;
+    padding: 100px;
 }
 
-#sub_nav_buttons:first-child {
-    background-color:#358357;
-};
+h2 {
+    font: 24px 'Abril Fatface', cursive;
 
- h2 {
-    font-family: 'Abril Fatface', cursive;
-    font-size:36px;
-    margin:0px;
 }
 
 p {
-    font-family:'Noto Sans', sans-serif;
-    font-size:18px;
+    font: 18px 'Noto Sans', sans-serif;
+
 }
 
 button {
-    background-color:#E9DECF;
-    border-radius:30px;
-    border:1px solid #D1BDAA;
-    font-family:'Noto Sans', sans-serif;
-    font-size:18px;
+    background-color: #e9decf;
+    border-radius: 30px;
+    border: 1px solid #D1bdaa;
+    font: 16px 'Noto Sans', sans-serif;
     text-transform: uppercase;
-    padding:20px;
+    padding-top: 15px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    margin-inline: 5px;
+
 }
 
 button.active {
-    background-color:#2C2D48;
-    color:#ffffff;
+    background-color: #2c2d48;
+    color: #ffffff;
 }
 
-/*display grid, columns of 25% each */
+#card_container {
+    width: 75%;
+    margin: auto;
+    
 
+}
 .cards {
-    display:grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    /*this centers the content but provides a margin */
-    margin: 5%;
-    width: auto;
-
-}
-
-/*card area, a nested grid */
-/*one area for letter, one for definition */
-
-.card_area {
-    background-color:#EDDFD1;
-    border:1px solid #D1BDAA;
-    border-radius: 15px;
-    margin:5%;
-    width: auto;
     display: grid;
-    padding:20px;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 
-    "letter letter"
-    "definition definition"
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-areas: "Card";
+   
+  
+  
 }
 
-/* hover color */
-
-.card_area:hover {
-
-background-color:#358357;
-color: #ffffff;
-
-}
-
-.card_area h1:hover {
-    color:#005C53;
-}
-
-.definition h2:hover, .card_area p:hover {
-    color:#ffffff;
-
-}
-/*undoing h1 default margin */
-.card_area h1 {
-    font-size:174px;
-    margin:0px;
-}
-
-/*parent has position absolute */
-.letter {
-    grid-area: letter;
-    /*float letter left*/
-    margin-left: auto;
-    position: relative;
-    display: flex;
-}
-
-.definition {
-    grid-area:definition;
-}
-
-
-/*position absolute and bottom 0px orients video to the bottom */
-.letter video {
-    width:100%;
-    position: absolute;
-    bottom:0px;
-}
-
-.letter img {
-    width: 100%;
-    position: absolute;
-    bottom: 18%;
-}
-
-/*@media only screen 
-  and (min-width: 320px) 
-  and (max-width: 600px)
- {
-
-
- }*/
-
- @media only screen 
-  and (min-width: 320px) 
-  and (max-width: 600px)
-  {
-    .cards {
-        display: grid;
-        grid-template-columns: 100%;
-        margin: 5%;
-        width: auto;
-    }
-}
+.Card {
+  display: flex;
+  justify-content: right;
+  padding-top: 15px;
+    padding-right: 35px;
+  align-items: flex;
+  width: 300px;
+  height: 500Px;
+  background-color: #e9decf;
+  color: #2c2d48;
+  border-radius: 30px;
+  border: 1px solid #D1bdaa;
+  font: 100px 'Abril Fatface', cursive;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  }

@@ -106,7 +106,7 @@ button.active {
 }
 
 .Card {
-  display: flex;
+  display: block;
   justify-content: right;
   padding-top: 15px;
     padding-right: 35px;
